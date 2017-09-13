@@ -8,6 +8,7 @@ from main.module.contact import contact_blueprint
 from main.module.services import services_blueprint
 from main.module.work import work_blueprint
 from main.module.blog import blog_blueprint
+from main.module.auth import auth_blueprint
 """
 :param object_name
 :return app
@@ -22,6 +23,7 @@ def create_app(object_name):
     app.register_blueprint(services_blueprint)
     app.register_blueprint(work_blueprint)
     app.register_blueprint(blog_blueprint)
+    app.register_blueprint(auth_blueprint)
     @app.route("/")
     def index():
         return redirect(url_for("home.home_index"))

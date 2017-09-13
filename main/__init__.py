@@ -1,6 +1,6 @@
 #-*-coding:utf-8-*-
 
-from flask import Flask
+from flask import Flask,redirect,url_for
 # import blurprint
 from main.module.home import home_blueprint
 from main.module.about import about_blueprint
@@ -24,5 +24,5 @@ def create_app(object_name):
     app.register_blueprint(blog_blueprint)
     @app.route("/")
     def index():
-        return "hello"
+        return redirect(url_for("home.home_index"))
     return app

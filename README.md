@@ -20,12 +20,15 @@
 
 1.本地新建项目
 >git clone git@github.com:PythonScientists/Shape
+>
 >cd Shape
+>
 >virtualenv env
 
 
 2.安装数据库以及依赖
 >在config文件中修改数据库配置
+>
 >pip install -r requirements.txt
 
 

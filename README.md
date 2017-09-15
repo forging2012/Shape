@@ -45,6 +45,9 @@
 ## 为了避免遇到问题时留言不及时，可以加我的微信
 
 
+![微信](https://github.com/PythonScientists/Shape/blob/master/other/photo/person.jpg)
+
+
 ![系统结构图展示](https://github.com/PythonScientists/Shape/blob/master/other/photo/未命名文件.png)
 ![系统界面展示](https://github.com/PythonScientists/Shape/blob/master/other/photo/content.png)
 

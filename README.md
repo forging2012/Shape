@@ -42,19 +42,29 @@
 >在supervisor配置gunicorn
 >
 >在nginx.conf文件中转发端口
-[program:shape]
-command=/home/shape/env/bin/gunicorn -w4 -b0.0.0.0:8000 manage:app 
-directory=/home/shape
-startsecs=0
-autostart=false
-autorestart=false
+>[program:shape]
+>
+>command=/home/shape/env/bin/gunicorn -w4 -b0.0.0.0:8000 manage:app 
+>
+>directory=/home/shape
+>
+>startsecs=0
+>
+>autostart=false
+>
+>autorestart=false
 
-[program:nginx]
-command=/usr/sbin/nginx
-startsecs=0
-stopwaitsecs=0
-autostart=false
-autorestart=false
+>[program:nginx]
+>
+>command=/usr/sbin/nginx
+>
+>startsecs=0
+>
+>stopwaitsecs=0
+>
+>autostart=false
+>
+>autorestart=false
 
 
 ## 需要注意的情况

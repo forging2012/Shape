@@ -1,3 +1,4 @@
+![](https://img.shields.io/badge/time-3day-red.svg) ![](https://img.shields.io/badge/build-passing-brightgreen.svg)![](https://img.shields.io/badge/download-0%2Fweek-orange.svg)
 # Shape
 # Shape the shape by my self 
 ## 介绍写网站的冲动
@@ -19,12 +20,15 @@
 
 1.本地新建项目
 >git clone git@github.com:PythonScientists/Shape
+>
 >cd Shape
+>
 >virtualenv env
 
 
 2.安装数据库以及依赖
 >在config文件中修改数据库配置
+>
 >pip install -r requirements.txt
 
 
@@ -36,7 +40,32 @@
 我的程序是用gunicron+nginx+supervisro运行的
 如果你们也想要这样部署的话，可以这么做
 >在supervisor配置gunicorn
+>
 >在nginx.conf文件中转发端口
+>[program:shape]
+>
+>command=/home/shape/env/bin/gunicorn -w4 -b0.0.0.0:8000 manage:app 
+>
+>directory=/home/shape
+>
+>startsecs=0
+>
+>autostart=false
+>
+>autorestart=false
+
+>[program:nginx]
+>
+>command=/usr/sbin/nginx
+>
+>startsecs=0
+>
+>stopwaitsecs=0
+>
+>autostart=false
+>
+>autorestart=false
+
 
 ## 需要注意的情况
 本项目是基于python3.4的，因此可能对于python2的同学安装的时候会出现一些问题，不过可以先尽量使用python3安装，以后会加入适应python2的情况的

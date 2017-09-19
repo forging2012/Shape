@@ -53,13 +53,13 @@ def confirm(token):
         flash("不好意思，这个确认链接已经失效")
     return redirect(url_for("home.home_index"))
 
-@auth_blueprint.before_app_request
-def before_request():
-    if  not current_user.is_authenticated() \
-        and not current_user.confirmed:
-        return redirect(url_for('auth.unconfirmed'))
-@auth_blueprint.route('/unconfirmed')
-def unconfirmed():
-    if current_user.is_anonymous() or current_user.confirmed:
-        return redirect(url_for('home.home_index'))
-    return render_template('about.html')
+# @auth_blueprint.before_app_request
+# def before_request():
+#     if  not current_user.is_authenticated \
+#         and not current_user.confirmed:
+#         return redirect(url_for('auth.unconfirmed'))
+# @auth_blueprint.route('/unconfirmed')
+# def unconfirmed():
+#     if current_user.is_anonymous() or current_user.confirmed:
+#         return redirect(url_for('home.home_index'))
+#     return render_template('about.html')

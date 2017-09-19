@@ -145,7 +145,11 @@
 
 				</div>
 				<div class="col-md-6 animate-box">
-					<h3>给我发邮件</h3>
+                    {% if current_user.is_authenticated %}
+                    <h3>{{ current_user.username }},多谢您能够登录，请给我发邮件，我会诚挚地接受您的意见</h3>
+                    {% else %}
+                    <h3>即时您没有登录,也给与我点意见，请给我发邮件</h3>
+                    {% endif %}
 					<form action="#">
 						<div class="row form-group">
 							<div class="col-md-6">

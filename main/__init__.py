@@ -13,6 +13,9 @@ from main.module.auth import auth_blueprint
 from main.models import db
 # import ext
 from main.ext import bcrypt
+from main.ext import bootstrap
+from main.ext import login_manager
+from main.ext import mail
 """
 :param object_name
 :return app
@@ -31,6 +34,9 @@ def create_app(object_name):
     #instance
     db.init_app(app)
     bcrypt.init_app(app)
+    login_manager.init_app(app)
+    bootstrap.init_app(app)
+    mail.init_app(app)
     @app.route("/")
     def index():
         return redirect(url_for("home.home_index"))

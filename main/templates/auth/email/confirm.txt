@@ -1,0 +1,2 @@
+点击这里可以确认您的账户
+{{url_for("auth.confirm" , token=token , _external=True)}}

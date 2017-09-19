@@ -9,7 +9,9 @@ from main.models import Post
 def blog_index():
     return render_template("blog.html")
 
-@blog_blueprint.route("/<int:post_id>")
+@blog_blueprint.route("/blog_list/<int:post_id>")
 def post(post_id):
     post=Post.query.get_or_404(post_id)
     return render_template("blog/post.html",post=post)
+@blog_blueprint.route("/blog_list")
+@blog_blueprint.route("/blog_list/<string:control>/<int:post_id>")

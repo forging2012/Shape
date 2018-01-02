@@ -1,4 +1,5 @@
-![](https://img.shields.io/badge/time-3day-red.svg) ![](https://img.shields.io/badge/build-passing-brightgreen.svg)![](https://img.shields.io/badge/download-0%2Fweek-orange.svg)
+![](https://img.shields.io/badge/time-3day-red.svg) ![](https://img.shields.io/badge/build-passing-brightgreen.svg)![](https://img.shields.io/badge/download-0%2Fweek-orange.svg)![](https://img.shields.io/scrutinizer/coverage/g/phpmyadmin/phpmyadmin/master.svg)
+
 # Shape
 # Shape the shape by my self 
 ## 介绍写网站的冲动
